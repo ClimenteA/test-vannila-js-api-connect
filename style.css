@@ -1,0 +1,104 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    background: whitesmoke;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 860px) {
+    body {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
+
+button {
+    all: unset;
+    height: 15px;
+    padding: 10px 15px;
+    background: lightsteelblue;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover{
+    background: lightblue;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+button:disabled {
+    background: lightslategray;
+    cursor: default;
+}
+
+.user {
+    display: block;
+    position: relative;
+    height: 150px;
+    min-width: 400px;
+    width: max-content;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    background: white;
+}
+
+.user:hover {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.user > button {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.about > a {
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    color: lightseagreen;
+    text-decoration: underline;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact span:first-child::before {
+    content: "\1F4F1 ";
+}
+
+.contact span:last-child:before {
+    content: "\1F4E7 ";
+}
+
